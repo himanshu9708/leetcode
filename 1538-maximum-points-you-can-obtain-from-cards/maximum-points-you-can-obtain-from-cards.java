@@ -7,9 +7,10 @@ class Solution {
         int sum = 0;
         for (int i = 0; i < k; i++) {
             sum += nums[i];
+            maxp = sum;
         }
         while (l < k) {
-            maxp = Math.max(maxp, sum);
+           // maxp = Math.max(maxp, sum);
             sum = sum - nums[k - l - 1];
             sum = sum + nums[r];
             maxp = Math.max(maxp, sum);
